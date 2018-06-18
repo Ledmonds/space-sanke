@@ -1,17 +1,16 @@
-Snake - Jaymz Edmonds
-
 Itroduction:
 ==========
-Modern implementation of the classic snake game written in the p5js javascript libary.
+Modern implementation of the classic Snake game written in the p5js library, created by Jaymz Edmonds: https://p5js.org/
 
-Consists of the following class libraries.
+Custom Classes.
 ==========
-Bearing.js //Holds bearing information about the direction snake is moving / can move.
-Board.js //Holds all data relevant to the playing area within the snake game.
-Environment.js //Holds data relevant to the general screen environment.
-FloatingText.js //Custom class that implements text effects used within game.
-Food.js //Holds class data about snake good source.
-Snake.js //Holds snake class data.
+Food.js 			//Contains code relevant to the food source for the Snake.
+Snake.js 			//Contains code relevant to the Snake itself.
+Bearing.js 			//Contains code relevant to bearing (direction) information that the Snake can / is moving in.
+Board.js 			//Contains code relevant to the playing area for the Snake game, such as board game size, size of game nodes. Snake and Food classes are also present in Board.js as this is the environment where they are interacted with.
+Environment.js 		//Contains code relevant to the general screen environment, such as background, information text, etc.
+FloatingText.js 	//Contains code relevant to creating text based effects used within game.
+Particles.js:		//Contains code relevant to creating custom particle effects in game, such as particles when the Snake eats some good.
 
 ToDo:
 ==========
@@ -32,8 +31,9 @@ Fix the Border drawing function, use Board class to push border CoOrds back to e
 Hard:
 =====
 Implement delta time for movement, over using the frame rate as speed can not be as yet correctly calculated.
+Port settings to external settings file.
 
-Bugs
-====
+Bugs:
+=====
 Snakehead leaves screen by 1 iteration when dead.
 When screen is resized the Press any key to play button comes back.
