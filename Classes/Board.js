@@ -1,46 +1,46 @@
-this.Board = function(_board_vector,_max_window_vector) {
+this.Board = function(board_size_vector,_max_window_vector) {
 	//Variables
-	this.board_vector = _board_vector;
-	this.node_size = _max_window_vector[0]*0.8/this.board_vector[0];
-	this.snake = new Snake([0,0],[255,120,54,255]);
-	this.food = new Food([floor(random(-this.board_vector[0]/2,this.board_vector[0]/2)),floor(random(-this.board_vector[1]/2,this.board_vector[1]/2))],[10,235,255,255]);
+	this.board_size_vector = board_size_vector;
+	this.max_window_vector = _max_window_vector;
+	this.node_size = _max_window_vector[0]*0.8/this.board_size_vector[0];
+	this.snake = new Snake([0,0],[255,120,54,255],true,0);
+	this.food = new Food([floor(random(-this.board_size_vector[0]/2,this.board_size_vector[0]/2)),floor(random(-this.board_size_vector[1]/2,this.board_size_vector[1]/2))],[10,107,255,255]);
 	this.particles = [];
+	this.game_speed = 20;
 
 	//Gettors
-	this.getBoardVector = function() {return this.board_vector;}
+	this.getBoardSizeVector = function() {return this.board_size_vector;}
 	this.getSnake = function() {return this.snake;}
 	this.getScore = function() {return this.snake.getSnakeScore();}
 	this.getNodeSize = function() {return this.node_size;}
+	this.getPartices = function() {return this.particles;}
+	this.getGameSpeed = function() {return	this.game_speed;}
 
 	//Settors
-	this.setNodeSize = function(_node_size) {this.node_size = _node_size;}
+	this.setGameSpeed = function(_game_speed) {this.game_speed = _game_speed;}
 
 	//Modifiers
 	this.iterateBoard = function() {
-		console.log(this.snake.getSnakeLiving());
+
 		if (!this.isSnakeBorderCollided() && !this.snake.hasSnakeBodyCollided() && this.snake.getSnakeLiving()) {
+			this.snake.iterateSnake();
 			if (this.isFoodCollided()) {
 				this.snake.addToSnake();
-				this.food.setFoodVector([floor(random(-this.board_vector[0]/2,this.board_vector[0]/2)),floor(random(-this.board_vector[1]/2,this.board_vector[1]/2))]);
-				environment.addFloatingText("+1",this.snake.getSnakeheadVector(),this.node_size);
+				this.food.setFoodVector([floor(random(-this.board_size_vector[0]/2,this.board_size_vector[0]/2)),floor(random(-this.board_size_vector[1]/2,this.board_size_vector[1]/2))]);
 				this.createParticles(this.snake.getSnakeheadVector());
 			}
-			this.snake.iterateSnake(); 
-		} else {
-			this.snake.setSnakeLiving(false);
-		}
+			
+		} else if (this.snake.getSnakeLiving()) this.snake.setSnakeLiving(false);
 
-		if (!this.snake.getSnakeLiving()) this.createParticles([random(-this.board_vector[0]/2,this.board_vector[0]/2),random(-this.board_vector[1]/2,this.board_vector[1]/2)]);
-		this.snake.drawSnake(this.node_size);	
-		this.iterateParticles();
-		this.food.drawFood(this.node_size);
+		if (!this.snake.getSnakeLiving()) this.createParticles([random(-this.board_size_vector[0]/2,this.board_size_vector[0]/2),random(-this.board_size_vector[1]/2,this.board_size_vector[1]/2)]);
 	}
 	this.boardResize = function(_max_window_vector) {
-		this.node_size = _max_window_vector[0]*0.8/this.board_vector[0];
+		this.max_window_vector = _max_window_vector;
+		this.node_size = _max_window_vector[0]*0.8/this.board_size_vector[0];
 	}
 
 	//Checkers
-	this.isSnakeBorderCollided = function() {return (this.snake.getSnakeheadVector()[0] <= -this.board_vector[0]/2-1 || this.snake.getSnakeheadVector()[1] <= -this.board_vector[1]/2-1 || this.snake.getSnakeheadVector()[0] >= (this.board_vector[0]/2) || this.snake.getSnakeheadVector()[1] >= (this.board_vector[1]/2)) ? true : false;}
+	this.isSnakeBorderCollided = function() {return (this.snake.getSnakeheadVector()[0] <= -this.board_size_vector[0]/2-1 || this.snake.getSnakeheadVector()[1] <= -this.board_size_vector[1]/2-1 || this.snake.getSnakeheadVector()[0] >= (this.board_size_vector[0]/2) || this.snake.getSnakeheadVector()[1] >= (this.board_size_vector[1]/2)) ? true : false;}
 	this.isFoodCollided = function() {return (this.snake.getSnakeheadVector()[0] == this.food.getFoodVector()[0] && this.snake.getSnakeheadVector()[1] == this.food.getFoodVector()[1]) ? true : false;}
 
 	//Particles
@@ -54,4 +54,10 @@ this.Board = function(_board_vector,_max_window_vector) {
 		}
 	}
 
+	//Drawers
+	this.drawBoard = function() {
+		this.iterateParticles();
+		this.food.drawFood(this.node_size);
+		this.snake.drawSnake(this.node_size);	
+	}
 }

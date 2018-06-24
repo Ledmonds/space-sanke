@@ -1,10 +1,10 @@
-this.Snake = function(_snakehead_vector,_snake_color) {
+this.Snake = function(_snakehead_vector,_snake_color,_looping,_bearing) {
 	//Variables
 	this.snakehead_vector = _snakehead_vector;
 	this.snake_color = _snake_color;
-	this.snakehead_bearing = new Bearing(0);
+	this.snakehead_bearing = new Bearing(_bearing);
 	this.snake_body = [this.snakehead_vector];
-	this.snake_looping = true;
+	this.snake_looping = _looping;
 	this.snake_start_length = 5;
 	this.snake_living = true;
 	this.snake_update_phase = false;
@@ -28,7 +28,6 @@ this.Snake = function(_snakehead_vector,_snake_color) {
 	}
 	this.setSnakeLooping = function(_snake_looping) {this.snake_looping = _snake_looping;}
 	this.setSnakeLiving = function(_snake_living) {this.snake_living = _snake_living;}
-	this.setSnakeUpdatePhase = function() {this.snake_update_phase = !snake_update_phase;}
 
 	//Modifiers
 	this.setupSnake = function() {
@@ -45,12 +44,15 @@ this.Snake = function(_snakehead_vector,_snake_color) {
 		this.snake_body.pop();
 		this.snake_update_phase = false;
 	}
-	this.addToSnake = function() {this.snake_body.push(_snakehead_vector);}
+	this.addToSnake = function() {this.snake_body.push(this.snake_body.slice(1));}
 	this.loopSnake = function() {
 		if (this.snakehead_vector[1] <= -this.snake_body.length/2 && this.snakehead_bearing.getBearing() == 0) this.snakehead_bearing.setBearing(3);
 		if (this.snakehead_vector[0] <= -this.snake_body.length/2 && this.snakehead_bearing.getBearing() == 3) this.snakehead_bearing.setBearing(2);
 		if (this.snakehead_vector[1] >= this.snake_body.length/2 && this.snakehead_bearing.getBearing() == 2) this.snakehead_bearing.setBearing(1);
 		if (this.snakehead_vector[0] >= this.snake_body.length/2 && this.snakehead_bearing.getBearing() == 1) this.snakehead_bearing.setBearing(0);
+	}
+	this.randomiseDirection = function() {
+		this.setBearing(floor(random(0,4)));
 	}
 
 	//Checkers
@@ -64,7 +66,7 @@ this.Snake = function(_snakehead_vector,_snake_color) {
 	//Drawers
 	this.drawSnake = function(_node_size) {//Draw Snakebody and Eyes
 		for(var i = 0; i < this.snake_body.length; ++i) {
-			fill(this.snake_color[0],this.snake_color[1],this.snake_color[2],map(this.snake_body.length-i,0,this.snake_body.length,80,255))
+			fill(this.snake_color[0],this.snake_color[1],this.snake_color[2],map(this.snake_body.length-i,0,this.snake_body.length,80,this.snake_color[3]))
 				.noStroke();
 			rect(_node_size*this.snake_body[i][0],_node_size*this.snake_body[i][1],_node_size,_node_size,3);
 		}
