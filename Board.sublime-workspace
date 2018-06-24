@@ -1,0 +1,789 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"getB",
+				"getSnakeBearing"
+			],
+			[
+				"get",
+				"getSnakeBearing"
+			],
+			[
+				"getFo",
+				"getFoodY"
+			],
+			[
+				"getSna",
+				"getSnakeheadY"
+			],
+			[
+				"getsnake",
+				"getSnakeheadX"
+			],
+			[
+				"bearing",
+				"bearing"
+			],
+			[
+				"getSnake",
+				"getSnakeheadX"
+			],
+			[
+				"r",
+				"return"
+			],
+			[
+				"Win",
+				"WINDOW_X"
+			],
+			[
+				"snake",
+				"snake_body"
+			],
+			[
+				"gener",
+				"generateRandomFoodCoOrds"
+			],
+			[
+				"board",
+				"board_y"
+			],
+			[
+				"wind",
+				"_window_x"
+			],
+			[
+				"win",
+				"_window_y"
+			],
+			[
+				"_wind",
+				"_window_x"
+			],
+			[
+				"gen",
+				"generateRandomFoodCoOrds"
+			],
+			[
+				"_win",
+				"_window_x"
+			],
+			[
+				"boad",
+				"board_y"
+			],
+			[
+				"bo",
+				"board_x"
+			],
+			[
+				"rand",
+				"generateRandomFoodCoOrds"
+			],
+			[
+				"W",
+				"WINDOW_X"
+			],
+			[
+				"_foo",
+				"_food_y"
+			],
+			[
+				"food",
+				"food_y"
+			],
+			[
+				"_f",
+				"_food_x"
+			],
+			[
+				"getFood",
+				"getFoodCharacter"
+			],
+			[
+				"isWa",
+				"isWallCollision"
+			],
+			[
+				"iter",
+				"iterateBoard"
+			],
+			[
+				"getSnakehead",
+				"getSnakeheadY"
+			],
+			[
+				"baord",
+				"board_x"
+			],
+			[
+				"print",
+				"printBoard"
+			],
+			[
+				"WIND",
+				"WINDOW_Y"
+			],
+			[
+				"pot",
+				"_potential_x"
+			],
+			[
+				"poten",
+				"_potential_y"
+			],
+			[
+				"_po",
+				"_potential_x"
+			],
+			[
+				"ba",
+				"board_y"
+			],
+			[
+				"bard",
+				"board_array"
+			],
+			[
+				"bearin",
+				"bearing"
+			],
+			[
+				"genera",
+				"generateBearingMap"
+			],
+			[
+				"is",
+				"isFoodCoOds"
+			],
+			[
+				"po",
+				"_potential_x"
+			],
+			[
+				"cha",
+				"character"
+			],
+			[
+				"_",
+				"_y"
+			],
+			[
+				"char",
+				"char"
+			],
+			[
+				"Wind",
+				"WINDOW_X"
+			],
+			[
+				"bear",
+				"bearing_map"
+			],
+			[
+				"_p",
+				"_potential_bearing"
+			],
+			[
+				"y",
+				"y"
+			],
+			[
+				"WIn",
+				"WINDOW_X"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"pote",
+				"_potential_y"
+			],
+			[
+				"p",
+				"printSnakeCoOrds"
+			],
+			[
+				"ge",
+				"generateRandomSnakeDelta"
+			],
+			[
+				"_head",
+				"_headX"
+			],
+			[
+				"_hea",
+				"_headY"
+			],
+			[
+				"head",
+				"headY"
+			],
+			[
+				"headX",
+				"headX"
+			],
+			[
+				"MAX",
+				"MAX_X"
+			],
+			[
+				"M",
+				"MAY_Y"
+			],
+			[
+				"pr",
+				"printBoard"
+			],
+			[
+				"vector",
+				"vector\tstandard header"
+			],
+			[
+				"fi",
+				"fizzBuzzIterative"
+			],
+			[
+				"Fizz",
+				"FizzBuzz"
+			],
+			[
+				"n",
+				"_number"
+			],
+			[
+				"string",
+				"string\tstandard header"
+			],
+			[
+				"arra",
+				"_array"
+			],
+			[
+				"A",
+				"ARRAY_MAX"
+			],
+			[
+				"a",
+				"_array"
+			],
+			[
+				"unorder",
+				"unordered_map\tstandard header (since c++11)"
+			],
+			[
+				"strin",
+				"_string2"
+			],
+			[
+				"s",
+				"_string1"
+			],
+			[
+				"test",
+				"test1"
+			],
+			[
+				"un",
+				"unordered_map\tstandard header (since c++11)"
+			],
+			[
+				"str",
+				"_string"
+			],
+			[
+				"loo",
+				"looping_char"
+			],
+			[
+				"re",
+				"recursiveFibbonaci"
+			],
+			[
+				"time",
+				"ctime\tstandard header"
+			],
+			[
+				"ar",
+				"array2"
+			],
+			[
+				"arr",
+				"array1"
+			],
+			[
+				"_a",
+				"_array2"
+			],
+			[
+				"I",
+				"INTEGER_MAX"
+			],
+			[
+				"num",
+				"_numbers_array"
+			],
+			[
+				"Int",
+				"INT_MIN"
+			],
+			[
+				"INT",
+				"INT_MAX"
+			],
+			[
+				"int",
+				"initBoard"
+			],
+			[
+				"sq",
+				"squareOfSums"
+			],
+			[
+				"sum",
+				"sumOfSquares"
+			],
+			[
+				"l",
+				"loop"
+			],
+			[
+				"in",
+				"_input"
+			],
+			[
+				"pre",
+				"previous1"
+			],
+			[
+				"en",
+				"endl"
+			],
+			[
+				"max",
+				"max_y"
+			],
+			[
+				"fill",
+				"_fill_color"
+			],
+			[
+				"set",
+				"setFillColor"
+			],
+			[
+				"cub",
+				"cube_number"
+			],
+			[
+				"ce",
+				"cube_number"
+			],
+			[
+				"cube",
+				"_cube_size"
+			],
+			[
+				"c",
+				"cube_size"
+			],
+			[
+				"draw",
+				"draw_cube"
+			],
+			[
+				"Array",
+				"cube_array"
+			],
+			[
+				"setS",
+				"setSpeed"
+			],
+			[
+				"rec",
+				"rect_dimensons"
+			],
+			[
+				"b",
+				"_body_size"
+			],
+			[
+				"drwa",
+				"draw_border"
+			],
+			[
+				"ass",
+				"asset_sheep"
+			],
+			[
+				"windo",
+				"window_y"
+			],
+			[
+				"inn",
+				"innerWidth"
+			],
+			[
+				"upda",
+				"posUpdate"
+			],
+			[
+				"pos",
+				"posUpdate"
+			],
+			[
+				"_ba",
+				"_bearing_x"
+			],
+			[
+				"ball",
+				"ball_pos_vector"
+			],
+			[
+				"_max",
+				"_max_x"
+			],
+			[
+				"mouse",
+				"mouseY"
+			],
+			[
+				"rn",
+				"random_velocity_x"
+			],
+			[
+				"ran",
+				"random_velocity_x"
+			],
+			[
+				"pad",
+				"paddle_scale_modifier_x"
+			],
+			[
+				"back",
+				"backfill_color"
+			],
+			[
+				"stroke",
+				"strokeWeight"
+			],
+			[
+				"darw",
+				"draw_arc_clock"
+			],
+			[
+				"frame",
+				"frame_rate"
+			],
+			[
+				"fra",
+				"frameRate"
+			],
+			[
+				"_snake",
+				"_snake_vector"
+			],
+			[
+				"_snae",
+				"_snake_vector"
+			],
+			[
+				"inner",
+				"innerWidth"
+			],
+			[
+				"buffer",
+				"buffer_range"
+			],
+			[
+				"buff",
+				"buffer_range"
+			],
+			[
+				"sna",
+				"snake_body"
+			],
+			[
+				"getF",
+				"generateFoodVector"
+			],
+			[
+				"random",
+				"random_food_x"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/C++_ncurses.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++_ncurses.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/C++_ncurses.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/leuanedmonds/Documents/Coding/C++ Projects/CMD_Sn-ke/main.cpp",
+		"/Users/leuanedmonds/Documents/Coding/C++ Projects/CMD_Snake/main.cpp",
+		"/Users/leuanedmonds/Desktop/Events.h",
+		"/Users/leuanedmonds/Library/Application Support/Sublime Text 3/Packages/User/C++_ncurses.sublime-build",
+		"/Users/leuanedmonds/Documents/Coding/C++ Projects/CMD_Snake/mainArrayFork.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/FizzBuzz.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/MultiplicationWithoutMultiplication.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/Math Functions.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/All Unique Characters.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/BinaryConverter.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/Bubble Sort.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/Anagram.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/Palindrome.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/String Reverse/String Reverse.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/First Non-Repeated Character.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/Eight Queens/First Non-Repeated Character.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/Eight Queens/Eight Queens.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/Fibbonaci.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/Find Most Frequent Integer/Find Most Frequent Integer.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Computer Science Problems/Jumbled Array/Jumbled Array.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Project Euler/Problem7/Problem7.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Project Euler/Problem6/Problem6.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Project Euler/Problem5/Problem5.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Project Euler/Problem4/Problem4.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Project Euler/Problem 3/Problem 3.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Project Euler/Problem 2/Problem 2.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Project Euler/Problem 1/Problem 1.cpp",
+		"/Users/leuanedmonds/Documents/Coding/Test.cpp",
+		"/Users/leuanedmonds/Documents/Coding/p5/Sliding Puzzle/main.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Sliding Puzzle/Slider.html",
+		"/Users/leuanedmonds/Documents/Coding/p5/Sliding Puzzle/cube.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Sliding Puzzle/Clock.html",
+		"/Users/leuanedmonds/Desktop/Programming Ideas.txt",
+		"/Users/leuanedmonds/Documents/Coding/p5/Testing/Testing.html",
+		"/Users/leuanedmonds/Documents/Coding/p5/Testing/Platform.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Testing/Player.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Testing/main.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Sheep/main.js",
+		"/Users/leuanedmonds/Desktop/ToDoList.txt",
+		"/Users/leuanedmonds/Documents/Coding/p5/Sheep/Sheep.html",
+		"/Users/leuanedmonds/Documents/Coding/p5/Pong/Pong.html",
+		"/Users/leuanedmonds/Documents/Coding/p5/Pong/Ball.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Pong/main.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Clock/main.js",
+		"/Users/leuanedmonds/Documents/Coding/Game Concepts/Farming Sim/Outline",
+		"/Users/leuanedmonds/Documents/Coding/Youtube Parser/Output/A0vOrrTws7U",
+		"/Users/leuanedmonds/Documents/Coding/Youtube Parser/Input.txt",
+		"/Users/leuanedmonds/Documents/Coding/Youtube Parser/Output/Script.sh",
+		"/Users/leuanedmonds/Documents/Coding/Youtube Parser/Output/Script2.sh",
+		"/Users/leuanedmonds/Downloads/facebook-leuanedmonds/messages/198.html",
+		"/Users/leuanedmonds/Documents/Coding/Input.txt",
+		"/Users/leuanedmonds/Documents/Coding/YoutubeParser.sh",
+		"/Users/leuanedmonds/Downloads/angler-opr6.170623.019/Nexus6PFactoryReset.sh",
+		"/Users/leuanedmonds/Downloads/Nexus6PFactoryReset.sh",
+		"/Users/leuanedmonds/Downloads/angler-opm5.171019.019/flash-all.sh",
+		"/Users/leuanedmonds/Documents/Coding/p5/Delta Time Example/sketch.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Snake [Array]/sketch.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Snake [Array]/Board.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Snake [Array]/Snake.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Snake [Array]/Snake.html",
+		"/Users/leuanedmonds/Documents/Coding/p5/Snake [Array]/Food.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Snake [Array]/B",
+		"/Users/leuanedmonds/Documents/Coding/p5/Snake [Array]/Cell.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Conoways Game of Life [Array]/Board.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Conoways Game of Life [Linked List]/Cell.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Conoways Game of Life [Linked List]/sketch.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Conoways Game of Life [Linked List]/LinkedList.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Conoways Game of Life [Linked List]/Board.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Conoways Game of Life [Array]/sketch.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/Conoways Game of Life [Linked List]/Conoways Game of Life.html",
+		"/Users/leuanedmonds/Documents/Coding/p5/empty-example/sketch.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/empty-example/Cell.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/empty-example/Board.js",
+		"/Users/leuanedmonds/Documents/Coding/p5/empty-example/index.html",
+		"/Users/leuanedmonds/Downloads/p5/empty-example/sketch.js",
+		"/Users/leuanedmonds/Downloads/p5/empty-example/Cell.js",
+		"/Users/leuanedmonds/Documents/Euler.Project.1.cpp"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 182.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/C++/C++ Single File.sublime-build",
+	"project": "Board.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
