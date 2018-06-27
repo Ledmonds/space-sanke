@@ -7,9 +7,6 @@ function setup() {
 		//Declaration
 		delta_time = new DeltaTime();
 		board = new Board([60,30],[window.innerWidth,window.innerHeight]);
-
-		//Setup
-		board.setupBoard();
 }
 
 function windowResized() {
@@ -21,9 +18,6 @@ function mouseClicked() {
 	if (!board.isSnakeLiving()) {
 		//Declaration
 		board = new Board([60,30],[window.innerWidth,window.innerHeight]);
-
-		//Setup
-		board.setupBoard();
 	}
 }
 
@@ -38,7 +32,6 @@ function keyPressed() {
 
 	if (board.getSnake().getSnakeLooping()) {
 		board.disableSnakeLooping();
-		board.createStarField();
 	}
 }
 

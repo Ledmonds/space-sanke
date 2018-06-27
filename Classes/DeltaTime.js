@@ -1,26 +1,31 @@
-this.DeltaTime = function() {
-	//Variables
-	this.new_time = (new Date).getTime();
-	this.old_time = 0;
-	this.delta_time = 0;
-	this.delta_time_reset = 0;
-	this.timer = 0;
+class DeltaTime {
+	//Constructor
+	constructor() {
+		this.new_time = (new Date).getTime();
+		this.old_time = 0;
+		this.delta_time = 0;
+		this.delta_time_reset = 0;
+		this.timer = 0;
+	}
+	
 
 	//Gettors
-	this.getDeltaTime = function() {return this.delta_time/1000;} //Miliseconds
-	this.getDeltaTimeReset = function() {return this.delta_time_reset;}
-	this.getTimer = function() {return this.timer;}
+	getDeltaTime() {return this.delta_time/1000;} //Miliseconds
+	getDeltaTimeReset() {return this.delta_time_reset;}
+	getTimer() {return this.timer;}
+
+
+	//Resettors
+	resetDeltaTimeReset() {this.delta_time_reset = 0;}
+	resetTimer() {this.timer = 0;}
+
 
 	//Modifiers
-	this.updateDeltaTime = function() {
+	updateDeltaTime() {
 		this.old_time = this.new_time;
 		this.new_time = (new Date).getTime();
 		this.delta_time = this.new_time-this.old_time;
 		this.delta_time_reset += this.delta_time/1000;
 		this.timer += this.delta_time/1000;
 	}
-	this.resetDeltaTimeReset = function() {this.delta_time_reset = 0;}
-	this.resetTimer = function() {this.timer = 0;}
-
-
-}
+};

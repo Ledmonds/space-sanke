@@ -30,6 +30,12 @@ Star = function(_star_vector) {
 	}
 
 
+	//Checkers
+	this.isStarOutsideBounds = function(_border_vector) {
+		return (this.getSX() <= _border_vector[0]+10 || this.getSX() >= _border_vector[2]-10 || this.getSY() <= _border_vector[1]+10 || this.getSY() >= _border_vector[3]-10 || this.star_vector[2] < 1) ? true : false;
+	}
+
+
 	//Iterators
 	this.iterateStar = function() {
 		this.pz = this.star_vector[2]+this.star_streak_length;
@@ -47,11 +53,4 @@ Star = function(_star_vector) {
 		stroke([this.star_color[0],this.star_color[1],this.star_color[2],this.getFadeinMap()]);
 		line(this.getPX(),this.getPY(),this.getSX(),this.getSY());
 	}
-
-
-	//Checkers
-	this.isStarOutsideBounds = function(_border_vector) {
-		return (this.getSX() <= _border_vector[0]+10 || this.getSX() >= _border_vector[2]-10 || this.getSY() <= _border_vector[1]+10 || this.getSY() >= _border_vector[3]-10 || this.star_vector[2] < 1) ? true : false;
-	}
-
-}
+};
