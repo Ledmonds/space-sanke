@@ -3,7 +3,6 @@ EASY:
 MEDIUM:
 Eaten food colour block within snake; shows which posistion food was in when it was eaten by the snake.
 Refactor the iterator functions to make the code a little more understandable.
-Implement the constructors for class files properly.
 
 HARD:
 Port settings to external settings file.
@@ -17,3 +16,4 @@ Upload to Github and use to manage code.
 Sin, Fading text function.
 Implement delta time for movement, over using the frame rate as speed can not be as yet correctly calculated.
 Fix the Border drawing function, use Board class to push border CoOrds back to environment class [x1,y1,x2,y2,node_size];
+Implement the constructors for class files properly.

@@ -3,7 +3,7 @@ class Particle {
 	constructor(_particle_vector) {
 		this.particle_vector = _particle_vector;
 		this.particle_color = [246,106,53,255];
-		this.size = random(2, 6);
+		this.size = random(2, 4);
 		this.initialangle = random(0, 2 * PI);
 		this.upOrDown = random(0,2);
 		this.leftOrRight = random(0,2);

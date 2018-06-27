@@ -12,12 +12,10 @@ class DeltaTime {
 	//Gettors
 	getDeltaTime() {return this.delta_time/1000;} //Miliseconds
 	getDeltaTimeReset() {return this.delta_time_reset;}
-	getTimer() {return this.timer;}
 
 
 	//Resettors
 	resetDeltaTimeReset() {this.delta_time_reset = 0;}
-	resetTimer() {this.timer = 0;}
 
 
 	//Modifiers
@@ -26,6 +24,5 @@ class DeltaTime {
 		this.new_time = (new Date).getTime();
 		this.delta_time = this.new_time-this.old_time;
 		this.delta_time_reset += this.delta_time/1000;
-		this.timer += this.delta_time/1000;
 	}
 };
