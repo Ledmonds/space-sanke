@@ -6,28 +6,22 @@ this.Snake = function(_snakehead_vector,_snake_color,_looping,_bearing) {
 	this.snake_body = [this.snakehead_vector];
 	this.snake_looping = _looping;
 	this.snake_start_length = 5;
-	this.snake_living = true;
-	this.snake_update_phase = false;
 
 	//Gettors
 	this.getSnakeheadVector = function() {return this.snakehead_vector;}
 	this.getSnakeColor = function() {return this.snake_color;}
 	this.getSnakeLoopingState = function() {return this.snake_looping_state;}
 	this.getSnakeBody = function() {return this.snake_body;}
-	this.getSnakeBodyLength = function() {return this.snake_body.length;}
+	this.getSnakeLength = function() {return this.snake_body.length;}
 	this.getSnakeLooping = function() {return this.snake_looping;}
 	this.getSnakeScore = function() {return this.snake_body.length-this.snake_start_length}
 	this.getSnakeheadBearing = function() {return this.snakehead_bearing.getBearing();}
-	this.getSnakeLiving = function() {return this.snake_living;}
-	this.getSnakeUpdatePhase = function() {return this.snake_update_phase;}
 
 	//Settors
 	this.setBearing = function(_bearing) {
 		this.snakehead_bearing.setBearing(_bearing);
-		this.snake_update_phase = true;
 	}
 	this.setSnakeLooping = function(_snake_looping) {this.snake_looping = _snake_looping;}
-	this.setSnakeLiving = function(_snake_living) {this.snake_living = _snake_living;}
 
 	//Modifiers
 	this.setupSnake = function() {
@@ -42,7 +36,6 @@ this.Snake = function(_snakehead_vector,_snake_color,_looping,_bearing) {
 
 		this.snakehead_vector = this.snake_body[0];
 		this.snake_body.pop();
-		this.snake_update_phase = false;
 	}
 	this.addToSnake = function() {this.snake_body.push(this.snake_body.slice(1));}
 	this.loopSnake = function() {
@@ -59,6 +52,12 @@ this.Snake = function(_snakehead_vector,_snake_color,_looping,_bearing) {
 	this.hasSnakeBodyCollided = function() {
 		for(var i = 1; i < this.snake_body.length; ++i) {
 			if (this.snakehead_vector[0] == this.snake_body[i][0] && this.snakehead_vector[1] == this.snake_body[i][1]) return true;
+		}
+		return false;
+	}
+	this.isVectorInSnake = function(_vector) {
+		for(var i = 0; i < this.snake_body.length; ++i) {
+			if (_vector[0] == this.snake_body[i][0] && _vector[1] == this.snake_body[i][1]) return true;
 		}
 		return false;
 	}

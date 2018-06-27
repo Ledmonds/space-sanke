@@ -1,8 +1,9 @@
 EASY:
-Eaten food colour block within snake; shows which posistion food was in when it was eaten by the snake.
 
 MEDIUM:
-Food randomiseCoOrds function to check if it collides with part of the snake body to stop it from spawning where the snake already is.
+Eaten food colour block within snake; shows which posistion food was in when it was eaten by the snake.
+Refactor the iterator functions to make the code a little more understandable.
+Implement the constructors for class files properly.
 
 HARD:
 Port settings to external settings file.
@@ -10,6 +11,7 @@ Break controls in main.js into it's own class.
 
 
 COMPLETED:
+Food randomiseCoOrds function to check if it collides with part of the snake body to stop it from spawning where the snake already is.
 Play again option.
 Upload to Github and use to manage code.
 Sin, Fading text function.

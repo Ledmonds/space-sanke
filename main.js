@@ -1,10 +1,4 @@
 /*==========
-Variables
-==========*/
-speed = 40;
-
-
-/*==========
 Setup
 ==========*/
 function setup() {
@@ -12,58 +6,59 @@ function setup() {
 	
 		//Declaration
 		delta_time = new DeltaTime();
-		environment = new Environment();
 		board = new Board([60,30],[window.innerWidth,window.innerHeight]);
 
 		//Setup
-		environment.setupEnvironment(board.getBoardSizeVector(),board.getNodeSize());
-		board.getSnake().setupSnake();
+		board.setupBoard();
 }
 
 function windowResized() {
 	resizeCanvas(window.innerWidth,window.innerHeight);
 	board.boardResize([window.innerWidth,window.innerHeight]);
-	environment.setupEnvironment(board.getBoardSizeVector(),board.getNodeSize()); 
 }
 
 function mouseClicked() {
+	if (!board.isSnakeLiving()) {
+		//Declaration
+		board = new Board([60,30],[window.innerWidth,window.innerHeight]);
 
-		if (!board.getSnake().getSnakeLiving()) {
-			//Declaration
-			environment = new Environment();
-			board = new Board([60,30],[window.innerWidth,window.innerHeight]);
-
-			//Setup
-			environment.setupEnvironment(board.getBoardSizeVector(),board.getNodeSize());
-			board.getSnake().setupSnake();
-		}
+		//Setup
+		board.setupBoard();
+	}
 }
 
 function keyPressed() {
-	if ((keyCode === UP_ARROW || keyCode === 87) && !board.getSnake().getSnakeUpdatePhase()) {board.getSnake().setBearing(0);} 
-	else if ((keyCode === RIGHT_ARROW || keyCode === 68) && !board.getSnake().getSnakeUpdatePhase()) {board.getSnake().setBearing(1);}
-	else if ((keyCode === DOWN_ARROW || keyCode === 83) && !board.getSnake().getSnakeUpdatePhase()) {board.getSnake().setBearing(2);} 
-	else if ((keyCode === LEFT_ARROW || keyCode === 65) && !board.getSnake().getSnakeUpdatePhase()) {board.getSnake().setBearing(3);}
+	if (keyCode === UP_ARROW || keyCode === 87) {board.getSnake().setBearing(0);} 
+	else if (keyCode === RIGHT_ARROW || keyCode === 68) {board.getSnake().setBearing(1);}
+	else if (keyCode === DOWN_ARROW || keyCode === 83) {board.getSnake().setBearing(2);} 
+	else if (keyCode === LEFT_ARROW || keyCode === 65) {board.getSnake().setBearing(3);}
+	
+	if (keyCode === SHIFT && !board.getSlowerState()) {board.slowGameDown()}
+	else if (keyCode === SHIFT && board.getSlowerState()) {board.speedGameUp()}
+
 	if (board.getSnake().getSnakeLooping()) {
-		board.getSnake().setSnakeLooping(false);
-		environment.disableStartText();
+		board.disableSnakeLooping();
+		board.createStarField();
 	}
 }
+
 
 /*==========
 Main
 ==========*/
-function draw() {
-  //board.boardResize([window.innerWidth+(random(-50,20)),window.innerHeight+(random(-50,20))]);
-  //environment.setupEnvironment(board.getBoardSizeVector(),board.getNodeSize()); 
+function draw() { 
+	clear();
+	translate(window.innerWidth/2,window.innerHeight/2);
 
 
 	if (delta_time.getDeltaTimeReset() * board.getGameSpeed() >= 1) {
 		board.iterateBoard();
-		delta_time.setDeltaTimeReset();
+		delta_time.resetDeltaTimeReset();
 	}
 
-	environment.iterateEnvironment(board.getScore());
+	board.iterateBackground();
 	board.drawBoard();
-	delta_time.setDeltaTime();
+	
+	
+	delta_time.updateDeltaTime();
 }
