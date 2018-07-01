@@ -1,6 +1,11 @@
+function preload() {
+	sound = new Sound();
+}
+
 function setup() {
 	createCanvas(window.innerWidth, window.innerHeight);
-	board = new Board([60,30],[window.innerWidth,window.innerHeight]);
+	board = new Board([50,25],[window.innerWidth,window.innerHeight]);
+	sound.playGameMusic();
 }
 
 function windowResized() {
@@ -10,20 +15,21 @@ function windowResized() {
 
 function keyPressed() {
 	//Checking for directional key presses.
-	if (keyCode === UP_ARROW || keyCode === 87) {board.getSnake().setBearing(0);} 
-	else if (keyCode === RIGHT_ARROW || keyCode === 68) {board.getSnake().setBearing(1);}
-	else if (keyCode === DOWN_ARROW || keyCode === 83) {board.getSnake().setBearing(2);} 
-	else if (keyCode === LEFT_ARROW || keyCode === 65) {board.getSnake().setBearing(3);}
+	if (keyCode === UP_ARROW || keyCode === 87) {board.getSnake().changeDirection(0);} 
+	else if (keyCode === RIGHT_ARROW || keyCode === 68) {board.getSnake().changeDirection(1);}
+	else if (keyCode === DOWN_ARROW || keyCode === 83) {board.getSnake().changeDirection(2);} 
+	else if (keyCode === LEFT_ARROW || keyCode === 65) {board.getSnake().changeDirection(3);}
 	
 	//Checking for speed change key presses.
-	if (keyCode === SHIFT && !board.getSlowerState()) {board.slowGameDown();}
-	else if (keyCode === SHIFT && board.getSlowerState()) {board.speedGameUp();}
+	if (keyCode === SHIFT) {board.swapGameSpeed();}
 
 	//Checking for initial key press.
 	if (board.getSnake().getSnakeLooping()) {board.disableSnakeLooping();}
+}
 
+function mouseClicked() {
 	//Reset Board is snake is dead.
-	if (!board.isSnakeLiving()) {board = new Board([60,30],[window.innerWidth,window.innerHeight]);}
+	if (!board.isSnakeLiving()) {board = new Board([50,25],[window.innerWidth,window.innerHeight]);}
 }
 
 
