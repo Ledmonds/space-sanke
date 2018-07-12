@@ -8,9 +8,9 @@ Snake is a game where the player manoeuvres a Snake which grows in length, with 
 
 
 ## Movement Controls
-WSAD Letter Keys: Players can use WSAD keys for direction movement.
-UDLR Arrow Keys: Players can also use the UDLR (Up, Down, Left, Right) directional arrow keys for direction movement.
-Shift: Players can use Shift key to slow and speed up in game movement speed.
+- WSAD Letter Keys: Players can use WSAD keys for direction movement.
+- UDLR Arrow Keys: Players can also use the UDLR (Up, Down, Left, Right) directional arrow keys for direction movement.
+- Shift: Players can use Shift key to slow and speed up in game movement speed.
 
 
 ## Classes:
