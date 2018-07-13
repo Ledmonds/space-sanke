@@ -5,7 +5,7 @@ function preload() {
 function setup() {
 	createCanvas(window.innerWidth, window.innerHeight);
 	board = new Board([50,25],[window.innerWidth,window.innerHeight]);
-	sound.playGameMusic();
+	//sound.playGameMusic();
 }
 
 function windowResized() {
@@ -24,7 +24,7 @@ function keyPressed() {
 	if (keyCode === SHIFT) {board.swapGameSpeed();}
 
 	//Checking for initial key press.
-	if (board.getSnake().getSnakeLooping()) {board.disableSnakeLooping();}
+	if (board.getSnake().getSnakeLooping()) {board.disableSnakeLoopingPhase();}
 }
 
 function mouseClicked() {

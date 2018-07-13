@@ -1,16 +1,16 @@
 # Introduction:
-Modern implementation of the classic Snake game written in the p5js library, created by Jaymz Edmonds: https:p5js.org/. Please clone / unpack repo, then launch index.html to begin game.
+Modern implementation of the classic Snake game written in the p5js library, created by Jaymz Edmonds: https:p5js.org/. You will need a locally running web server pointed at ./Space.Snake/ directory. Please clone / unpack repo, then lauch http://localhost to start the game.
 
 ![Alt text](./assets/cover_image.jpg?raw=true "Space Snake.js")
 
 ## Game Outline
-Snake is a game where the player manoeuvres a Snake which grows in length, with the Snake tail itself being a primary obstacle. Players must avoid their own Snake tail, while attempting to navigate to and eat randomly spawning food items. The game is finished when a player either collides with the game border or the Snakes tail.
+Snake is a game where the player manoeuvres a Snake which grows in length, with the Snake tail itself being a primary obstacle. Players must avoid their own Snake tail, while attempting to navigate to, and eat randomly spawning food items. The game is finished when a player either collides with the game border or their own Snakes tail.
 
 
 ## Movement Controls
-- WSAD Letter Keys: Players can use WSAD keys for direction movement.
-- UDLR Arrow Keys: Players can also use the UDLR (Up, Down, Left, Right) directional arrow keys for direction movement.
-- Shift: Players can use Shift key to slow and speed up in game movement speed.
+- WSAD Letter Keys: Players can use teh WSAD keys for directional movement.
+- UDLR Arrow Keys: Players can also use the UDLR (Up, Down, Left, Right) arrow keys for directional movement.
+- Shift: Players can use the Shift key to slow and speed up in game movement speed. Useful when dealing with difficult food spawns, or navigating tricky tail paths.
 
 
 ## Classes:
@@ -28,7 +28,7 @@ Snake is a game where the player manoeuvres a Snake which grows in length, with 
 
 ## Other Files:
 - bugs.txt: Contains current known bugs in game that need to be resolved.
-- readMe.txt: ReadMe file for game.
+- ReadMe.txt: ReadMe file for game.
 - toDo.txt: Contains a list of new features to be added into game.
 - changelog.txt: Tracks changes made through various versions.
 - credits.txt: Crediting file for Creative Commons content used within game.

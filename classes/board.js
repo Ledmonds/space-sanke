@@ -10,6 +10,7 @@ class Board {
 		this.game_over = false;
 		this.slower_state = false;
 		this.delta_time = new DeltaTime();
+		this.playgame_message_displayed = false;
 
 		//Environmental Variables
 		this.border_bumper = 0;
@@ -47,11 +48,12 @@ class Board {
 		this.floating_text_array.push(new FloatingText("Score: 0",[this.border_vector[0],this.border_vector[3]+this.node_size],"Persistant",LEFT));
 		this.floating_text_array.push(new FloatingText("GitHub Repo: https://github.com/Ledmonds/Snake",[this.border_vector[2],this.border_vector[1]-this.node_size/2],"Persistant",RIGHT));
 		this.floating_text_array.push(new FloatingText("Snake Implementation Created Within the p5js Library - Jaymz Edmonds",[this.border_vector[0],this.border_vector[1]-this.node_size/2],"Persistant",LEFT));
-		this.floating_text_array.push(new FloatingText("Press Any Key To Start",[0,0],"Sin",CENTER));
+		if (!this.playgame_message_displayed) this.floating_text_array.push(new FloatingText("Press Any Key To Start",[0,0],"Sin",CENTER)); //The bool check stops the message from being displayed if the board is resized. Horrible soloution but it works.
+		else this.floating_text_array.push(new FloatingText("Score: "+this.snake.getSnakeScore()+"\nClick Mouse To Play Again",[0,0],"SinFadein",CENTER));
 	}
 	boardResize(_max_window_vector) {
 		this.node_size = (_max_window_vector[0]/this.board_size_vector[0])*0.8;
-		this.border_vector = this.setupBorderElements()
+		this.border_vector = this.setupBorderElements();
 		this.setupFloatingText();
 	}
 	setupBorderElements() { //Horrible function that generates the border dimensions for the game: [x1,y1,x2,y2];
@@ -81,6 +83,7 @@ class Board {
 			
 		//If snake is dead and game is not yet over, set game over variable and game over message.
 		} else if (!this.game_over) {
+			sound.playSnakeDeath();
 			this.game_over = true;
 			this.floating_text_array.push(new FloatingText("Score: "+this.snake.getSnakeScore()+"\nClick Mouse To Play Again",[0,0],"SinFadein",CENTER));
 		
@@ -128,11 +131,7 @@ class Board {
 
 	//Modifiers
 	swapGameSpeed() {
-		if (this.slower_state) {
-			this.speedGameUp();
-		} else {
-			this.slowGameDown();
-		}
+		this.slower_state ? this.speedGameUp() : this.slowGameDown();
 	}
 	generateRandomBoardCoOrds() {
 		return [floor(random(-this.board_size_vector[0]/2,this.board_size_vector[0]/2))*this.node_size,floor(random(-this.board_size_vector[1]/2,this.board_size_vector[1]/2))*this.node_size];
@@ -145,9 +144,10 @@ class Board {
 		}
 		return temp_coords;
 	}
-	disableSnakeLooping() {
+	disableSnakeLoopingPhase() {
 		this.snake.setSnakeLooping(false);
 		this.floating_text_array[3].setTextType("SinFadeout");
+		this.playgame_message_displayed = true;
 		sound.playGameStart();
 	}
 	snakeHasEatenFood() {

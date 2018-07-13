@@ -21,6 +21,7 @@ class FloatingText {
 
 
 	//Settors
+	setTextVector(_text_vector) {this.text_vector = _text_vector;}
 	setTextValue(_text_value) {this.text_value = _text_value;}
 	setTextType(_text_type) {this.text_type = _text_type;}
 
