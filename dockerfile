@@ -6,10 +6,11 @@ FROM node:19-alpine
 WORKDIR /usr/src/app
 
 # Install packages
-COPY ./src/package*.json ./
-RUN npm install
-
 COPY ./src/ .
+RUN npm install \
+    && chown -R node ./
+
+USER node
 
 EXPOSE 8080
 
